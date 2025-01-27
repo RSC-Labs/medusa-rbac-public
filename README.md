@@ -8,6 +8,11 @@ Medusa itself does not provide ability to properly control the access to differe
 
 Interested? Go to: [What I need to do to have it?](#i-am-interested-what-i-need-to-do)
 
+This repository has been created for instruction purposes and as a place for raising bugs and improvements.
+
+## Found a bug or looking for an improvement?
+
+Please raise an issue in Github issues.
 
 ## Installation
 
