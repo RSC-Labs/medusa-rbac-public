@@ -1,0 +1,51 @@
+openapi: 3.0.1
+info:
+  version: "1.0"
+  title: "RBAC Test Endpoint"
+  description: |
+   This API checks provided logged-in user against the RBAC configuration.
+paths:
+  /admin/rbac/test/me:
+    post:
+      tags:
+      - "rbac"
+      summary: "Test me"
+      requestBody:
+        description: URL to test.
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                urlToTest:
+                  type: string
+                  example: '/admin/api/to/check'
+      responses:
+        "201":
+          description: "Returns authorization response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  actorId:
+                    type: string
+                  url:
+                    type: string
+                  allowed:
+                    type: string
+                    enum: [read, write, delete]
+                  denied:
+                    type: string
+                    enum: [read, write, delete]
+                      
+        "400":
+          description: "Not OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
