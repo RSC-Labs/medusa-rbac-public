@@ -6,7 +6,7 @@ Medusa RBAC provides a framework for Role-Based Access Control in Medusa.
 
 Medusa itself does not provide ability to properly control the access to different functionalities, and also do not expose any API or extensible parts, but this plugin tries to enable such control as much as possible.
 
-Interested? Go to: [What I need to do to have it?](#i-am-interested-what-i-need-to-do)
+Interested? Go to: [What I need to do to have it?](#i-am-interested-what-i-need-to-do). It is a commercial software so it requires a licence to be used.
 
 This repository has been created for instruction purposes and as a place for raising bugs and improvements.
 
