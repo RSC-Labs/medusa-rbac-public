@@ -143,4 +143,4 @@ As mentioned, this plugin is behind the licence. We offer two types of licences:
 - lifetime - recommended for people who create the store for the client (so cannot spend money on monthly basis). For one price, you can get this RBAC forever.
 
 
-We offer also 14-day free trial if you are not sure if you need this plugin - please reach us via labs@rsoftcon.com to get the trial licence key.
+We offer also 14-day free trial if you are not sure if you need this plugin - please reach us via labs@rsoftcon.com or go to https://www.medusa-plugins.com.
