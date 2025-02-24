@@ -20,7 +20,7 @@ Please raise an issue in Github issues.
 
 ```json
 ...
-"@rsc-labs/medusa-rbac": "1.0.0" // or other available version
+"@rsc-labs/medusa-rbac": "1.3.0" // or other available version
 ...
 ```
 and execute install, e.g. `yarn install`.
