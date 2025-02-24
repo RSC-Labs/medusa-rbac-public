@@ -5,7 +5,7 @@ info:
   description: |
    This API checks provided logged-in user against the RBAC configuration.
 paths:
-  /admin/rbac/test/me:
+  /admin/rbac/check:
     post:
       tags:
       - "rbac"
