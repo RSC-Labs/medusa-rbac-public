@@ -16,7 +16,45 @@ Please raise an issue in Github issues.
 
 ## Installation
 
-TODO
+1. Install plugin by adding to your `package.json`:
+
+```json
+...
+"@rsc-labs/medusa-rbac": "1.0.0" // or other available version
+...
+```
+and execute install, e.g. `yarn install`.
+
+2. Add plugin to your `medusa-config.js` with the licence key, which you received:
+
+```js
+...
+plugins: [
+    {
+      resolve: "@rsc-labs/medusa-rbac",
+      options: {
+        licenceKey: <licence-key>
+      }
+    }
+]
+...
+```
+
+3. Due to: https://github.com/medusajs/medusa/issues/11248 you need also add following configuration to `medusa-config.js`:
+```js
+admin: {
+  vite: () => {
+    return {
+      optimizeDeps: {
+        include: ["@emotion/react", "@mui/material"]
+      },
+    };
+  },
+},
+projectConfig: {
+  ...
+}
+```
 
 ### Database migration
 
@@ -29,7 +67,7 @@ npx medusa db:migrate
 
 Medusa RBAC comes with predefined permissions - it is recommended to execute a script firstly:
 ```bash
-npx medusa exec ./src/scripts/seed-rbac.tsx
+npx medusa exec node_modules/@rsc-labs/medusa-rbac/.medusa/server/src/scripts/seed-rbac.js
 ```
 
 ## Architecture
@@ -117,9 +155,9 @@ You can also switch between `Permission view` and `Category view`.
 
 For you custom scenarios, when you have your own API paths, you may want to know if logged-in user has the access to particular route.
 
-This plugin exposes additional endpoint `admin/rbac/test/me`, which you can execute on your frontend code to get the status.
+This plugin exposes additional endpoint `admin/rbac/check`, which you can execute on your frontend code to get the status.
 
-The API definition can be found here: [Test me](./docs/api/test-me.yaml)
+The API definition can be found here: [Check](./docs/api/check.yaml)
 
 ## Q&A
 
