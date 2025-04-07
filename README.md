@@ -18,10 +18,15 @@ Please raise an issue in Github issues.
 
 1. Install plugin by adding to your `package.json`:
 
+**Warning**
+
+Due to bug in MedusaJS, different version of plugin supports different version of MedusaJS.
+
 ```json
 ...
-"@rsc-labs/medusa-rbac": "1.3.0" // or other available version
+"@rsc-labs/medusa-rbac": "1.3.0" // up to 1.4.0 supports MedusaJS up to 2.4.0
 ...
+"@rsc-labs/medusa-rbac": "1.5.0" // from 1.5.0 supports MedusaJS from 2.6.2 (or its snapshot version e.g. 2.6.2-snapshot-20250310153842)
 ```
 and execute install, e.g. `yarn install`.
 
@@ -39,6 +44,10 @@ plugins: [
 ]
 ...
 ```
+
+**Info**
+
+Below applicable only for MedusaJS up to 2.6.2 (exclusively). From 2.6.2 it is not needed.
 
 3. Due to: https://github.com/medusajs/medusa/issues/11248 you need also add following configuration to `medusa-config.js`:
 ```js
