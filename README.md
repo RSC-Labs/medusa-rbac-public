@@ -20,13 +20,12 @@ Please raise an issue in Github issues.
 
 **Warning**
 
-Due to bug in MedusaJS, different version of plugin supports different version of MedusaJS.
+Lower versions than 2.0.0 are deprecated.
 
 ```json
 ...
-"@rsc-labs/medusa-rbac": "1.3.0" // up to 1.4.0 supports MedusaJS up to 2.4.0
+"@rsc-labs/medusa-rbac": "2.0.0" // lower versions are deprecated
 ...
-"@rsc-labs/medusa-rbac": "1.5.0" // from 1.5.0 supports MedusaJS from 2.6.2 (or its snapshot version e.g. 2.6.2-snapshot-20250310153842)
 ```
 and execute install, e.g. `yarn install`.
 
